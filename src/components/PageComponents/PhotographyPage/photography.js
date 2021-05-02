@@ -57,6 +57,7 @@ const Photography = () => {
           image={photoACF.portraitsCover.localFile}
           link="/portrait-gallery"
         />
+
         <RightPane
           data={data}
           name={photoACF.streetPhotographyLabel}

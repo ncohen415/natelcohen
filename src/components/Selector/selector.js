@@ -32,6 +32,14 @@ const GridContainer = styled.main`
     ${media.small`max-width: 300px; max-height: 300px; overflow: visible;`}
     ${media.smallMedium`max-width: 300px; max-height: 300px; overflow: visible;`}
     ${media.medium`max-width: 100%; max-height: 100%; overflow: visible;`}
+    .title-wrapper {
+      display: flex;
+      justify-content: center;
+      h3 {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 `
 
@@ -52,10 +60,12 @@ const LeftPaneWrapper = styled.div`
   &:hover {
     transform: scale(1.15);
     z-index: 1;
+    ${media.medium`transform: scale(1);`}
   }
   &.shrink {
     transform: scale(0.9);
     opacity: 0.8;
+    ${media.medium`transform: scale(1);`}
   }
   a {
     width: inherit;
@@ -110,10 +120,12 @@ const RightPaneWrapper = styled.div`
   &:hover {
     transform: scale(1.15);
     z-index: 1;
+    ${media.medium`transform: scale(1);`}
   }
   &.shrink {
     transform: scale(0.9);
     opacity: 0.8;
+    ${media.medium`transform: scale(1);`}
   }
   a {
     width: inherit;
