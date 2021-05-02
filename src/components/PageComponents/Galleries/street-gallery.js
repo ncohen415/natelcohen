@@ -21,6 +21,9 @@ const GridContainer = styled.div`
   width: 100%;
   overflow-x: scroll;
   .slick-slider {
+    display: flex;
+    align-items: center;
+    height: 65vh;
     width: 100%;
     .slick-prev {
       margin-left: 3rem;

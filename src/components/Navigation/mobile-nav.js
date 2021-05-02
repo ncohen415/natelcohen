@@ -6,9 +6,6 @@ import { Link } from "gatsby"
 import Nav from "./nav"
 import { media } from "../mq"
 
-import Email from "../../images/social/mail.svg"
-import Instagram from "../../images/social/ig.svg"
-
 const OverlayInput = styled.input`
   display: none;
 
@@ -38,7 +35,7 @@ const OverlayButton = styled.label`
   left: 0.5rem;
   top: 0.5rem;
   padding: 26px 33px;
-  z-index: 5;
+  z-index: 21;
   cursor: pointer;
   user-select: none;
   ${media.medium`display:none;`}
@@ -100,7 +97,7 @@ const Overlay = styled.div`
   ${media.medium`display: none;`}
   &.active {
     display: block;
-    z-index: 2;
+    z-index: 20;
   }
   ul {
     display: flex;
