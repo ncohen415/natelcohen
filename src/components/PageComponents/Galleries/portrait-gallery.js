@@ -112,19 +112,28 @@ const PortraitGallery = () => {
 
   const portraitGalleryACF = data?.wpPage?.PortraitGalleryACF
   console.log(portraitGalleryACF)
+  let portraitSettings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
   return (
     <Layout>
       <GridContainer>
-        <Slider
-          dots={false}
-          infinite={true}
-          slidesToShow={3}
-          slidesToScroll={1}
-          autoplay={true}
-          speed={1500}
-          autoplaySpeed={4000}
-          pauseOnHover={true}
-        >
+        <Slider {...portraitSettings}>
           {portraitGalleryACF.portraitGalleryImages.map(
             portraitGalleryImage => {
               const image =

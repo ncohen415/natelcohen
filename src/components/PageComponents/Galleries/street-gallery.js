@@ -110,20 +110,28 @@ const PortraitGallery = () => {
     }
   `)
   const streetGalleryACF = data?.wpPage?.StreetGalleryACF
-
+  let streetSettings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
   return (
     <Layout>
       <GridContainer>
-        <Slider
-          dots={false}
-          infinite={true}
-          slidesToShow={3}
-          slidesToScroll={1}
-          autoplay={false}
-          speed={1500}
-          autoplaySpeed={4000}
-          pauseOnHover={true}
-        >
+        <Slider {...streetSettings}>
           {streetGalleryACF.streetGalleryImages.map(streetGalleryImage => {
             const image = streetGalleryImage?.streetGalleryImage.localFile
             return <GatsbyImage image={getImage(image)} alt="Gallery Image" />
