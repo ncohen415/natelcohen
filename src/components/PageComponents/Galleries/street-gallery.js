@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { media } from "../../mq"
 
 //Components
-import Layout from "../../Layout"
+import Layout from "../../layout"
 
 //Slick
 import Slider from "react-slick"
