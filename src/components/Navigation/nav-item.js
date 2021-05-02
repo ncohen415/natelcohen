@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { media } from "../mq"
-import MenuItem from "../../../../pocket-pictures/src/components/Header/menu-item"
 
 const NavItemWrapper = styled.li`
   display: flex;
