@@ -1,6 +1,23 @@
 query SINGLE_CONTENT_QUERY($id: ID!) {
   page(id: $id) {
-    DevCustomFields {
+    AboutACF {
+      aboutPageContent
+      aboutPageImage {
+        __typename
+        id
+      }
+      aboutPageLabel
+      fieldGroupName
+    }
+    ContactACF {
+      contactImage {
+        __typename
+        id
+      }
+      contactInfo
+      fieldGroupName
+    }
+    DevACF {
       fieldGroupName
       portfolioSites {
         fieldGroupName
@@ -16,6 +33,56 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
         }
         siteUrlPlain
       }
+    }
+    HomeACF {
+      fieldGroupName
+      photographyCover {
+        __typename
+        id
+      }
+      photographyLabel
+      webDevelopmentCover {
+        __typename
+        id
+      }
+      webDevelopmentLabel
+    }
+    PhotographyACF {
+      fieldGroupName
+      portraitsCover {
+        __typename
+        id
+      }
+      portraitsLabel
+      streetPhotographyCover {
+        __typename
+        id
+      }
+      streetPhotographyLabel
+    }
+    PortraitGalleryACF {
+      fieldGroupName
+      portraitDescription
+      portraitGalleryImages {
+        fieldGroupName
+        portraitGalleryImage {
+          __typename
+          id
+        }
+      }
+      portraitLabel
+    }
+    StreetGalleryACF {
+      fieldGroupName
+      streetDescription
+      streetGalleryImages {
+        fieldGroupName
+        streetGalleryImage {
+          __typename
+          id
+        }
+      }
+      streetLabel
     }
     ancestors(first: 100) {
       nodes {

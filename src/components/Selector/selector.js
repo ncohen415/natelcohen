@@ -36,6 +36,8 @@ const GridContainer = styled.main`
 `
 
 const LeftPaneWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   max-width: 100%;
   transform: scale(1);
   transition: 1s;
@@ -55,33 +57,39 @@ const LeftPaneWrapper = styled.div`
     transform: scale(0.9);
     opacity: 0.8;
   }
-  .paneOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 98%;
-    opacity: 0;
-    color: white;
-    transition: 1s;
-    &:hover {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.3);
+  a {
+    width: inherit;
+    .gatsby-image-wrapper {
+      width: inherit;
     }
-    div {
-      height: 100%;
+    .paneOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+      height: 98%;
+      opacity: 0;
+      color: white;
+      transition: 1s;
+      &:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
       div {
+        height: 100%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        h2 {
+        div {
           display: flex;
+          flex-direction: column;
           justify-content: center;
-          color: white;
+          h2 {
+            display: flex;
+            justify-content: center;
+            color: white;
+          }
         }
       }
     }
@@ -107,33 +115,39 @@ const RightPaneWrapper = styled.div`
     transform: scale(0.9);
     opacity: 0.8;
   }
-  .paneOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 98%;
-    opacity: 0;
-    color: white;
-    transition: 1s;
-    &:hover {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.3);
+  a {
+    width: inherit;
+    .gatsby-image-wrapper {
+      width: inherit;
     }
-    div {
-      height: 100%;
+    .paneOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+      height: 98%;
+      opacity: 0;
+      color: white;
+      transition: 1s;
+      &:hover {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
       div {
+        height: 100%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        h2 {
+        div {
           display: flex;
+          flex-direction: column;
           justify-content: center;
-          color: white;
+          h2 {
+            display: flex;
+            justify-content: center;
+            color: white;
+          }
         }
       }
     }

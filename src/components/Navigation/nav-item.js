@@ -7,7 +7,7 @@ import MenuItem from "../../../../pocket-pictures/src/components/Header/menu-ite
 const NavItemWrapper = styled.li`
   display: flex;
   justify-content: center;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0.25rem 0 0.25rem 0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 15px;

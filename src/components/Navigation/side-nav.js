@@ -11,7 +11,7 @@ const SideNavContainer = styled.div`
   display: none;
   ${media.medium`height: 100%; background: #ffffff; display: flex; justify-content: start; flex-direction: column; flex: 1 1 25%; max-height: auto; animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transition: 1.3s;`}
   .brand-wrapper {
-    margin: 70px 0 2rem 2rem;
+    margin: 70px 0 1.5rem 2rem;
     width: 100%;
     display: flex;
     a {

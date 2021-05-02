@@ -25,7 +25,7 @@ const NavContainer = styled.nav`
     list-style: none;
     margin: 0;
     padding: 0;
-    ${media.medium`padding: 0; margin: 3rem 0 0 3rem; list-style-type: none; height: 100%;`}
+    ${media.medium`padding: 0; margin: 2rem 0 0 2rem; list-style-type: none; height: 100%;`}
     .socials {
       display: flex;
       justify-content: center;
@@ -52,7 +52,6 @@ const NavContainer = styled.nav`
 `
 
 const Nav = ({ menu }) => {
-  console.log(menu)
   return (
     <NavContainer>
       <ul className="nav">

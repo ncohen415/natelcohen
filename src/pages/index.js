@@ -2,56 +2,47 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 //Components
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import Selector from "../components/Selector/selector"
-import RightPane from "../components/Selector/right-pane"
-import LeftPane from "../components/Selector/left-pane"
+import Home from "../components/PageComponents/HomePage/home-page"
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query HomePaneCovers {
-      WorkStation: file(relativePath: { eq: "workstation2.jpeg" }) {
-        childImageSharp {
-          gatsbyImageData(
-            formats: WEBP
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 500
-          )
+const IndexPage = ({ data }) => {
+  return <Home data={data} />
+}
+
+export const data = graphql`
+  query HomePageQuery {
+    wpPage(title: { eq: "Home Page" }) {
+      HomeACF {
+        photographyLabel
+        photographyCover {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED
+                formats: WEBP
+                placeholder: BLURRED
+                width: 750
+                quality: 100
+              )
+            }
+          }
         }
-      }
-      CityScape: file(relativePath: { eq: "cityscape.jpeg" }) {
-        childImageSharp {
-          gatsbyImageData(
-            formats: WEBP
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 500
-          )
+        webDevelopmentLabel
+        webDevelopmentCover {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                formats: WEBP
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                width: 750
+                quality: 100
+              )
+            }
+          }
         }
       }
     }
-  `)
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <Selector>
-        <LeftPane
-          data={data}
-          name="Photography"
-          image={data.CityScape}
-          link="/photography/"
-        />
-        <RightPane
-          data={data}
-          name="Web Development"
-          image={data.WorkStation}
-          link="/dev/"
-        />
-      </Selector>
-    </Layout>
-  )
-}
+  }
+`
 
 export default IndexPage
