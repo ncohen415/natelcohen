@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { media } from "../../mq"
+import SEO from "../../seo"
 
 //Components
 import Layout from "../../layout"
@@ -113,6 +114,7 @@ const Dev = () => {
 
   return (
     <Layout>
+      <SEO title="Web Development" />
       <DevPageContainer>
         <div className="portfolio-container">
           <div className="portfolio-wrapper">

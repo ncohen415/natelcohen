@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { media } from "./mq"
-import Seo from "./seo"
+import SEO from "./seo"
 
 import SideNav from "./Navigation/side-nav"
 import "./layout.css"
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Seo title={data.site.siteMetadata.title} />
+      <SEO title={data.site.siteMetadata.title} />
       <BodyLayout>
         <SideNav siteTitle={data.site.siteMetadata?.title || `Title`} />
         <div className="grid">{children}</div>

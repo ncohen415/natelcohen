@@ -3,8 +3,9 @@ import styled from "styled-components"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { media } from "../../mq"
+import SEO from "../../seo"
 
-//COmponents
+//Components
 import Layout from "../../layout"
 
 const AboutContainer = styled.div`
@@ -96,6 +97,7 @@ const About = () => {
   const aboutACF = data?.wpPage?.AboutACF
   return (
     <Layout>
+      <SEO title="About" />
       <AboutContainer>
         <div>
           <div className="content-container">

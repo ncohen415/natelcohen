@@ -3,6 +3,8 @@ module.exports = {
     title: `Nate L. Cohen`,
     description: `Nate Cohen is a San Francisco born and based photographer and self-taught full-stack web developer. He works with Gatsby and Shopify to create unique web experiences for clients and is passionate about documenting life on film.`,
     author: `@natelcohen`,
+    instagramUsername: `@natelcohen`,
+    url: "natelcohen.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,11 +49,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Nate L. Cohen`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

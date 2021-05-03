@@ -2,7 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import SEO from "../../seo"
 
+//Components
 import Layout from "../../layout"
 
 const ContactPageContainer = styled.div`
@@ -69,6 +71,7 @@ const Contact = () => {
   console.log(contactACF)
   return (
     <Layout>
+      <SEO title="Contact" />
       <ContactPageContainer>
         <div className="contact-page-wrapper">
           <div className="contact-image-wrapper">

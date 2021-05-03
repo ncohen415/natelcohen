@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import SEO from "../../seo"
 
 //Components
 import Layout from "../../layout"
@@ -48,6 +49,7 @@ const Photography = () => {
   const photoACF = data?.wpPage?.PhotographyACF
   return (
     <Layout>
+      <SEO title="Photography" />
       <Selector title1="Portraits" title2="Street Photography">
         <LeftPane
           data={data}

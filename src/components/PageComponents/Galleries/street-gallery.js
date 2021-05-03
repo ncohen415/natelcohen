@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { media } from "../../mq"
+import SEO from "../../seo"
 
 //Components
 import Layout from "../../layout"
@@ -130,6 +131,7 @@ const PortraitGallery = () => {
   }
   return (
     <Layout>
+      <SEO title="Street Gallery" />
       <GridContainer>
         <Slider {...streetSettings}>
           {streetGalleryACF.streetGalleryImages.map(streetGalleryImage => {
