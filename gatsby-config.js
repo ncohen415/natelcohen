@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Nate L. Cohen`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Nate Cohen is a San Francisco born and based photographer and self-taught full-stack web developer. He works with Gatsby and Shopify to create unique web experiences for clients and is passionate about documenting life on film.`,
+    author: `@natelcohen`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

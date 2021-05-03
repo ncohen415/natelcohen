@@ -13,7 +13,7 @@ const Home = data => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Selector>
+      <Selector title1="Photography" title2="Web Development">
         <LeftPane
           data={data}
           name={homeACF.photographyLabel}

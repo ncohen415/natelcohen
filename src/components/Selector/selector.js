@@ -32,9 +32,21 @@ const GridContainer = styled.main`
     ${media.small`max-width: 300px; max-height: 300px; overflow: visible;`}
     ${media.smallMedium`max-width: 300px; max-height: 300px; overflow: visible;`}
     ${media.medium`max-width: 100%; max-height: 100%; overflow: visible;`}
-    .title-wrapper {
+    .title-wrapper-left {
       display: flex;
       justify-content: center;
+      padding: 1rem 0 0 0;
+      ${media.medium`display: none;`}
+      h3 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .title-wrapper-right {
+      display: flex;
+      justify-content: center;
+      padding: 0 0 1rem 0;
+      ${media.medium`display: none;`}
       h3 {
         padding: 0;
         margin: 0;
@@ -58,14 +70,14 @@ const LeftPaneWrapper = styled.div`
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   ${media.medium`max-width: 95%; transform-origin: left;`}
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1);
     z-index: 1;
-    ${media.medium`transform: scale(1);`}
+    ${media.medium`transform: scale(1.15);`}
   }
   &.shrink {
-    transform: scale(0.9);
+    transform: scale(1);
     opacity: 0.8;
-    ${media.medium`transform: scale(1);`}
+    ${media.medium`transform: scale(0.9);`}
   }
   a {
     width: inherit;
@@ -118,14 +130,14 @@ const RightPaneWrapper = styled.div`
   z-index: 1;
   ${media.medium`max-width: 95%; transform-origin: right;`}
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1);
     z-index: 1;
-    ${media.medium`transform: scale(1);`}
+    ${media.medium`transform: scale(1.15);`}
   }
   &.shrink {
-    transform: scale(0.9);
+    transform: scale(1);
     opacity: 0.8;
-    ${media.medium`transform: scale(1);`}
+    ${media.medium`transform: scale(0.9);`}
   }
   a {
     width: inherit;
@@ -166,8 +178,9 @@ const RightPaneWrapper = styled.div`
   }
 `
 
-const Selector = ({ children }, props) => {
+const Selector = ({ children, ...props }) => {
   const [activePane, setActivePane] = useState(-1)
+  console.log(props)
   return (
     <GridContainer>
       <div className="paneContainer">
@@ -178,8 +191,14 @@ const Selector = ({ children }, props) => {
         >
           {children[0]}
         </LeftPaneWrapper>
+        <div class="title-wrapper-left">
+          <h3>{props.title1}</h3>
+        </div>
       </div>
       <div className="paneContainer">
+        <div class="title-wrapper-right">
+          <h3>{props.title2}</h3>
+        </div>
         <RightPaneWrapper
           onMouseOver={() => setActivePane(1)}
           className={activePane === 0 ? "shrink" : ""}

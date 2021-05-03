@@ -46,11 +46,9 @@ const Photography = () => {
   `)
 
   const photoACF = data?.wpPage?.PhotographyACF
-  console.log(photoACF)
-
   return (
     <Layout>
-      <Selector>
+      <Selector title1="Portraits" title2="Street Photography">
         <LeftPane
           data={data}
           name={photoACF.portraitsLabel}

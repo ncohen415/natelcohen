@@ -60,14 +60,14 @@ const Nav = ({ menu }) => {
         })}
         <li className="socials">
           <a href="mailto:nate.cohen415@gmail.com">
-            <img src={Email} alt="hi" />
+            <img src={Email} alt="Email" />
           </a>
           <a
             href="https://www.instagram.com/natelcohen"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Instagram} alt="hey" />
+            <img src={Instagram} alt="Instagram" />
           </a>
         </li>
       </ul>

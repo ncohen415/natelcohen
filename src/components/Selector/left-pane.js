@@ -3,6 +3,7 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const LeftPane = data => {
+  console.log(data)
   return (
     <Link to={data.link}>
       <GatsbyImage image={getImage(data.image)} alt="hi" />
